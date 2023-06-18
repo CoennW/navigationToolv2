@@ -1,0 +1,69 @@
+html {
+  background-color: #f5f5f5;
+}
+
+#root {
+  background-color: #f5f5f5;
+}
+
+.logo_wrapper {
+  transition: 0.2s;
+}
+
+.navigation_p2_logo svg {
+  transition: 0.4s;
+  /* transition-delay: s; */
+}
+
+.logo_wrapper:hover {
+  background-color: white;
+  padding: 9px 30px;
+  padding-right: 25px;
+  padding-left: 140px;
+  margin-bottom: 0;
+  margin-left: -30px;
+  transition: 0.2s;
+}
+
+.logo_wrapper:hover::after {
+  content: "P2 Home ->";
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(40%);
+  left: 15px;
+  width: 100px;
+  color: black;
+  transition: 0.2s;
+}
+
+.navigation_p2_logo {
+  fill: white;
+}
+
+.logo_wrapper:hover .navigation_p2_logo svg {
+  position: relative;
+  height: 71px;
+  bottom: -1px;
+  transition: 0.2s;
+  transition-delay: 0.1s;
+  fill: rgb(232, 57, 70);
+  animation: tilt-shaking 1s ease-in-out infinite;
+}
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20% {
+    transform: rotate(0eg);
+  }
+  30% {
+    transform: rotate(-2deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+}
